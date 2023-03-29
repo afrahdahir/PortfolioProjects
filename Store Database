@@ -1,0 +1,16 @@
+CREATE TABLE afrahs_clothing
+(id TEXT PRIMARY KEY,
+item TEXT,
+price INTEGER,
+quantity INTEGER,
+size TEXT);
+
+INSERT INTO afrahs_clothing VALUES (1, "t-shirt", 10, 5, "s");
+INSERT INTO afrahs_clothing VALUES (2, "leggings", 15, 3, "m");
+INSERT INTO afrahs_clothing VALUES (3, "sweater", 20, 4, "m");
+INSERT INTO afrahs_clothing VALUES (4, "socks", 8, 2, "l");
+INSERT INTO afrahs_clothing VALUES (5, "skirt", 25, 1, "l");
+
+SELECT * FROM afrahs_clothing;
+
+SELECT item, price FROM afrahs_clothing;
