@@ -1,0 +1,41 @@
+/* Create table about the people and what they do here */
+
+CREATE TABLE movie_stars (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    fullname TEXT,
+    age INTEGER,
+    nationality TEXT);
+    
+    INSERT INTO movie_stars (fullname, age, nationality) VALUES ("Angelina Jolie", 47, "US");
+    INSERT INTO movie_stars (fullname, age, nationality) VALUES ("Brad Pitt", 59, "US");
+        INSERT INTO movie_stars (fullname, age, nationality) VALUES ("Denzel Washington", 68, "US");
+    INSERT INTO movie_stars (fullname, age, nationality) VALUES ("Jim Carrey", 61, "France");
+    INSERT INTO movie_stars (fullname, age, nationality) VALUES ("Ryan Ghosling", 42, "Canadian");
+    INSERT INTO movie_stars (fullname, age, nationality) VALUES ("Ryan Reynolds", 46, "Canadian");
+    INSERT INTO movie_stars (fullname, age, nationality) VALUES ("Idris Elba", 50, "British");
+    INSERT INTO movie_stars (fullname, age, nationality) VALUES ("Salma Hayek", 56, "Mexican");
+    INSERT INTO movie_stars (fullname, age, nationality) VALUES ("Nicole Kidman",55,
+"Australian");
+    INSERT INTO movie_stars (fullname, age, nationality) VALUES ("Tom Hardy", 55, "British");
+    
+CREATE table wealth (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    star_id INTEGER,
+    net_worth TEXT,
+    movie TEXT);
+    
+    INSERT INTO wealth (star_id, net_worth, movie) VALUES (1, "120 million", "Tomb Raider");
+INSERT INTO wealth (star_id, net_worth, movie) VALUES (2, "400 million", "Troy");
+INSERT INTO wealth (star_id, net_worth, movie) VALUES (3, "280 million", "Training Day");
+INSERT INTO wealth (star_id, net_worth, movie) VALUES (4, "180 million", "The Mask");
+INSERT INTO wealth (star_id, net_worth, movie) VALUES (5, "70 million", "The Notebook");
+INSERT INTO wealth (star_id, net_worth, movie) VALUES (6, "150 million", "Deadpool");
+INSERT INTO wealth (star_id, net_worth, movie) VALUES (7, "40 million", "Beast");
+INSERT INTO wealth (star_id, net_worth, movie) VALUES (8, "200 million", "Frida");
+INSERT INTO wealth (star_id, net_worth, movie) VALUES (9, "170 million", "Monster");
+INSERT INTO wealth (star_id, net_worth, movie) VALUES (10, "55 million", "Venom");
+
+SELECT movie_stars.fullname, wealth.net_worth
+FROM movie_stars
+JOIN wealth
+ON movie_stars.id = star_id;
